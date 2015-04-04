@@ -12,10 +12,10 @@ import com.jme3.scene.Node;
 /**
  * Created by znak on 05.04.2015.
  */
-public class SceneBase extends AbstractAppState {
+public abstract class SceneBase extends AbstractAppState {
 
     protected SimpleApplication app;
-    protected Node rootNode;
+    protected Node rootNode, guiNode;
     protected AssetManager assetManager;
     protected AppStateManager stateManager;
     protected InputManager inputManager;
@@ -30,5 +30,12 @@ public class SceneBase extends AbstractAppState {
         this.inputManager = this.app.getInputManager();
         this.viewPort = this.app.getViewPort();
         this.rootNode = this.app.getRootNode();
+        this.guiNode = this.app.getGuiNode();
+        start();
     }
+
+    /**
+     * Scene entry point
+     */
+    protected abstract void start();
 }
