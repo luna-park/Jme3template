@@ -16,7 +16,10 @@ public class SceneGame extends SceneBase {
     @Override
     public void initialize(AppStateManager stateManager, Application app) {
         super.initialize(stateManager, app);
+    }
 
+    @Override
+    protected void start() {
         Box b = new Box(1, 1, 1);
         Geometry geom = new Geometry("Box", b);
 
