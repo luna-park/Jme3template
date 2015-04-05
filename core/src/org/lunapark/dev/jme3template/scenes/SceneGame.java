@@ -8,18 +8,32 @@ import com.jme3.scene.Geometry;
 import com.jme3.scene.shape.Box;
 import com.jme3.texture.Texture;
 
+import org.lunapark.dev.jme3template.Game;
+
+import de.lessvoid.nifty.Nifty;
+import de.lessvoid.nifty.screen.Screen;
+import de.lessvoid.nifty.screen.ScreenController;
+
 /**
  * Created by znak on 05.04.2015.
  */
-public class SceneGame extends SceneBase {
+public class SceneGame extends SceneBase implements ScreenController {
 
     @Override
     public void initialize(AppStateManager stateManager, Application app) {
         super.initialize(stateManager, app);
     }
 
+    /**
+     * TODO GAME CODE
+     */
     @Override
     protected void start() {
+        Game.nifty.gotoScreen("hud");
+        app.getFlyByCamera().setEnabled(true);
+        app.getFlyByCamera().setDragToRotate(false);
+        inputManager.setCursorVisible(false);
+
         Box b = new Box(1, 1, 1);
         Geometry geom = new Geometry("Box", b);
 
@@ -30,6 +44,20 @@ public class SceneGame extends SceneBase {
         geom.setMaterial(mat);
 
         rootNode.attachChild(geom);
+    }
+
+    @Override
+    public void bind(Nifty nifty, Screen screen) {
+        System.out.println("Bind");
+    }
+
+    @Override
+    public void onStartScreen() {
+
+    }
+
+    @Override
+    public void onEndScreen() {
 
     }
 }

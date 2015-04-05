@@ -9,7 +9,7 @@ public class DesktopLauncher {
 
     public static void main(String[] args) {
         AppSettings settings = new AppSettings(true);
-        settings.setResolution(1280, 720);
+        settings.setResolution(800, 480);
         settings.setFrameRate(60);
         Game game = new Game();
         game.setSettings(settings);

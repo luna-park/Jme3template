@@ -24,18 +24,19 @@ allprojects {
 project(":core") {
     apply plugin: "java"
     dependencies {
-        compile 'com.jme3:jme3-core:3.0.+'
+        compile 'com.jme3:jme3-core:3.+'
+        compile 'com.jme3:jme3-niftygui:3.+'
+        compile 'net.sf.sociaal:eventbus:3.+' // for NiftyGui
 
-//        compile 'com.jme3:jme3-effects:3.0.+'
-//        compile 'com.jme3:jme3-networking:3.0.+'
-//        compile 'com.jme3:jme3-plugins:3.0.+'
-//        compile 'com.jme3:jme3-jogg:3.0.+'
-//        compile 'com.jme3:jme3-terrain:3.0.+'
-//        compile 'com.jme3:jme3-blender:3.0.+'
-//        compile 'com.jme3:jme3-jbullet:3.0.+'
-//        compile 'com.jme3:jme3-niftygui:3.0.+'
+//        compile 'com.jme3:jme3-effects:3.+'
+//        compile 'com.jme3:jme3-networking:3.+'
+//        compile 'com.jme3:jme3-plugins:3.+'
+//        compile 'com.jme3:jme3-jogg:3.+'
+//        compile 'com.jme3:jme3-terrain:3.+'
+//        compile 'com.jme3:jme3-blender:3.+'
+//        compile 'com.jme3:jme3-jbullet:3.+'
 //
-//        compile 'net.sf.sociaal:jME3-testdata:3.0.0.20130526'
+//        compile 'net.sf.sociaal:jME3-testdata:3.+'
     }
 }
 
@@ -43,8 +44,8 @@ project(":desktop") {
     apply plugin: "java"
     dependencies {
         compile project(":core")
-        compile 'com.jme3:jme3-desktop:3.0.+'
-        compile 'com.jme3:jme3-lwjgl:3.0.+'
+        compile 'com.jme3:jme3-desktop:3.+'
+        compile 'com.jme3:jme3-lwjgl:3.+'
     }
 }
 
@@ -52,6 +53,6 @@ project(":app") {
     apply plugin: "android"
     dependencies {
         compile project(":core")
-        compile 'com.jme3:jme3-android:3.0.+'
+        compile 'com.jme3:jme3-android:3.+'
     }
 }
