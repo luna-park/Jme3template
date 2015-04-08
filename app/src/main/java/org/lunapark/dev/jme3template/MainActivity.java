@@ -1,6 +1,8 @@
 package org.lunapark.dev.jme3template;
 
 import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.view.WindowManager;
 
 import com.jme3.app.AndroidHarness;
 import com.jme3.system.android.AndroidConfigChooser;
@@ -29,6 +31,12 @@ public class MainActivity extends AndroidHarness {
         mouseEventsEnabled = true;
 
         // Set the default logging level (default=Level.INFO, Level.ALL=All Debug Info)
-        LogManager.getLogManager().getLogger("").setLevel(Level.INFO);
+        LogManager.getLogManager().getLogger("").setLevel(Level.SEVERE);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 }

@@ -39,7 +39,7 @@
         </layer>
     </screen>
 
-    <screen id="hud">
+    <screen controller="org.lunapark.dev.jme3template.scenes.SceneGame" id="hud">
         <layer childLayout="center" id="background">
             <image filename="Interface/bgHud.png" height="100%" width="100%"></image>
         </layer>
@@ -47,11 +47,10 @@
             <panel childLayout="vertical" height="100%" id="panel_left" width="80%"></panel>
             <panel childLayout="vertical" height="100%" id="panel_right" width="20%">
                 <panel childLayout="center" height="15%" id="panel_top_right1" width="100%">
-                    <control name="label" color="#f0f" height="100%" text="123" width="100%" />
+                    <control name="label" color="#f00" height="100%" text="Text" width="100%" />
                 </panel>
                 <panel childLayout="center" height="15%" id="panel_top_right2" width="100%">
-                    <image align="center" filename="Interface/face1.png" height="50%"
-                        valign="center" width="30%"></image>
+                    <image align="center" filename="Interface/face1.png" valign="center"></image>
                 </panel>
                 <panel height="70%" id="panel_bot_right" valign="center" width="100%"></panel>
             </panel>

@@ -29,6 +29,7 @@ public class Game extends SimpleApplication implements ScreenController {
         nifty.gotoScreen("mainmenu");
         guiViewPort.addProcessor(niftyDisplay);
 
+
         flyCam.setEnabled(false);
         flyCam.setDragToRotate(true);
         inputManager.setCursorVisible(true);
@@ -65,4 +66,6 @@ public class Game extends SimpleApplication implements ScreenController {
                 break;
         }
     }
+
+
 }

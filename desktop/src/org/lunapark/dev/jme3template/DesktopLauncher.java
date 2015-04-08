@@ -5,7 +5,7 @@ import com.jme3.system.AppSettings;
 /**
  * Created by znak on 05.04.2015.
  */
-public class DesktopLauncher {
+class DesktopLauncher {
 
     public static void main(String[] args) {
         AppSettings settings = new AppSettings(true);

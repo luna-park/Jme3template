@@ -28,7 +28,7 @@ project(":core") {
         compile 'com.jme3:jme3-niftygui:3.+'
         compile 'net.sf.sociaal:eventbus:3.+' // for NiftyGui
 
-//        compile 'com.jme3:jme3-effects:3.+'
+        compile 'com.jme3:jme3-effects:3.+'
 //        compile 'com.jme3:jme3-networking:3.+'
 //        compile 'com.jme3:jme3-plugins:3.+'
 //        compile 'com.jme3:jme3-jogg:3.+'
